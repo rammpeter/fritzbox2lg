@@ -1,0 +1,16 @@
+{
+    "name": "fritzbox2lg",
+    "version": "0.0.1",
+    "description": "Show FritBox events on LG smart TV",
+    "main": "fritzbox2lg.js",
+    "scripts": {
+      "start": "node fritzbox2lg.js"
+    },
+    "repository": {
+      "type": "git",
+      "url": "https://github.com/rammpeter/fritzbox2lg.git"
+    },
+    "dependencies": {
+      "lgtv2":"latest"
+    }
+  }
