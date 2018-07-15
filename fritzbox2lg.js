@@ -1,5 +1,7 @@
 console.log("Starting");
 
+const os = require('os');
+
 // Initialize LG 
 var lgtv = require("lgtv2")({
     url: "ws://LGwebOSTV.fritz.box:3000",
@@ -12,7 +14,7 @@ lgtv.on('error', function(err){
 
 lgtv.on('connect', function () {
     console.log('connected');
-    sendMessage2TV('fritzbox2lg: Verbindung hergestellt');
+    sendMessage2TV(`fritzbox2lg: Verbindung hergestellt von ${os.hostname()}`);
 });
 
 function sendMessage2TV(message){
