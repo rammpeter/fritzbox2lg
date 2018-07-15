@@ -10,6 +10,11 @@ lgtv.on('error', function(err){
     console.log(err);
 });
 
+lgtv.on('connect', function () {
+    console.log('connected');
+    sendMessage2TV('fritzbox2lg: Verbindung hergestellt');
+});
+
 function sendMessage2TV(message){
     lgtv.request('ssap://system.notifications/createToast', {message: message});
 }
